@@ -1,0 +1,162 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-1 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 110px;
+  height: 110px;
+}
+.icon-10 {
+  background-image: url(../img/sprite.png);
+  background-position: -204px -130px;
+  width: 31px;
+  height: 57px;
+}
+.icon-11 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -260px;
+  width: 56px;
+  height: 34px;
+}
+.icon-2 {
+  background-image: url(../img/sprite.png);
+  background-position: -130px 0px;
+  width: 110px;
+  height: 110px;
+}
+.icon-3 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -130px;
+  width: 110px;
+  height: 110px;
+}
+.icon-4 {
+  background-image: url(../img/sprite.png);
+  background-position: -329px -75px;
+  width: 35px;
+  height: 62px;
+}
+.icon-5 {
+  background-image: url(../img/sprite.png);
+  background-position: -329px -157px;
+  width: 45px;
+  height: 49px;
+}
+.icon-6 {
+  background-image: url(../img/sprite.png);
+  background-position: -260px 0px;
+  width: 49px;
+  height: 62px;
+}
+.icon-7 {
+  background-image: url(../img/sprite.png);
+  background-position: -260px -148px;
+  width: 40px;
+  height: 51px;
+}
+.icon-8 {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -314px;
+  width: 30px;
+  height: 51px;
+}
+.icon-9 {
+  background-image: url(../img/sprite.png);
+  background-position: -260px -82px;
+  width: 46px;
+  height: 46px;
+}
+.icon-Phone {
+  background-image: url(../img/sprite.png);
+  background-position: -260px -219px;
+  width: 20px;
+  height: 20px;
+}
+.icon-edit {
+  background-image: url(../img/sprite.png);
+  background-position: -116px -260px;
+  width: 18px;
+  height: 18px;
+}
+.icon-email {
+  background-image: url(../img/sprite.png);
+  background-position: -154px -260px;
+  width: 18px;
+  height: 18px;
+}
+.icon-facebook clik {
+  background-image: url(../img/sprite.png);
+  background-position: -50px -314px;
+  width: 35px;
+  height: 35px;
+}
+.icon-facebook {
+  background-image: url(../img/sprite.png);
+  background-position: -105px -314px;
+  width: 35px;
+  height: 35px;
+}
+.icon-insta clik {
+  background-image: url(../img/sprite.png);
+  background-position: -160px -314px;
+  width: 35px;
+  height: 35px;
+}
+.icon-insta {
+  background-image: url(../img/sprite.png);
+  background-position: -215px -314px;
+  width: 35px;
+  height: 35px;
+}
+.icon-marker {
+  background-image: url(../img/sprite.png);
+  background-position: -130px -130px;
+  width: 54px;
+  height: 81px;
+}
+.icon-mause scrol {
+  background-image: url(../img/sprite.png);
+  background-position: -329px 0px;
+  width: 55px;
+  height: 55px;
+}
+.icon-sent {
+  background-image: url(../img/sprite.png);
+  background-position: -329px -226px;
+  width: 17px;
+  height: 14px;
+}
+.icon-user {
+  background-image: url(../img/sprite.png);
+  background-position: -76px -260px;
+  width: 20px;
+  height: 20px;
+}
+.icon-vk clik {
+  background-image: url(../img/sprite.png);
+  background-position: -270px -314px;
+  width: 35px;
+  height: 35px;
+}
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -325px -314px;
+  width: 35px;
+  height: 35px;
+}
