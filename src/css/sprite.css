@@ -130,7 +130,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 54px;
   height: 81px;
 }
-.icon-mause scrol {
+.icon-mause {
   background-image: url(../img/sprite.png);
   background-position: -329px 0px;
   width: 55px;
