@@ -20,7 +20,6 @@
 </head>
 <body>
 	
-	<video class="bg-video" src="media/lol.mp4" loop autoplay></video>
 
 	<nav id="mobile-menu">
 	  <header>
@@ -34,7 +33,6 @@
 		<li class="social__item"><a href="" class="social__link icon-facebook"></a></li>
 	</ul>
 
-	<main id="panel">
 		<header class="header">
 			<div class="container">
 				<div class="header__logo">
@@ -42,18 +40,24 @@
 				</div>
 				<nav class="header__nav">
 					<ul id="menu" class="menu">
-						<li class="menu__item" data-menuanchor="index"><a class="menu__link" href="#index">главная</a></li>
-						<li class="menu__item" data-menuanchor="service"><a class="menu__link" href="#service">услуга</a></li>
-						<li class="menu__item" data-menuanchor="pillars"><a class="menu__link" href="#pillars">пиларс</a></li>
-						<li class="menu__item" data-menuanchor="conditions"><a class="menu__link" href="#conditions">условие</a></li>
-						<li class="menu__item" data-menuanchor="contacts"><a class="menu__link" href="#contacts">контакты</a></li>
+						<li class="menu__item" data-menuanchor="pindex"><a class="menu__link" href="#index">главная</a></li>
+						<li class="menu__item" data-menuanchor="pservice"><a class="menu__link" href="#service">услуга</a></li>
+						<li class="menu__item" data-menuanchor="ppillars"><a class="menu__link" href="#pillars">пиларс</a></li>
+						<li class="menu__item" data-menuanchor="pconditions"><a class="menu__link" href="#conditions">условие</a></li>
+						<li class="menu__item" data-menuanchor="pcontacts"><a class="menu__link" href="#contacts">контакты</a></li>
 					</ul>
 				</nav>
+				<div class="hamburger">
+				</div>
 			</div>
 		</header>
+	<main id="panel">
+		<div class="bg">
+			<video class="bg-video" src="media/lol.mp4" loop autoplay></video>
+		</div>
 
 		<div id="fullpage">
-		    <section class="section index" id="">
+		    <section class="section index" id="index">
 		    	<div class="container">
 		    		<div class="index__txt">
 		    			<p>РЕКЛАМА, КОТОРАЯ</p>
@@ -64,7 +68,7 @@
 		    	<div class="icon-mause"></div>	
 		    </section><!--index-->
 
-		    <section class="section service" id="">
+		    <section class="section service" id="service">
 				<div class="container">
 					<div class="service__txt">
 						<h3 class="h2">ЧТО МЫ ПРЕДЛАГАЕМ</h3>
@@ -77,9 +81,9 @@
 		    </section><!--service-->
 
 
-		    <section class="section pillars" id="">
-				<div class="container">
-					<div class="col-sm-4">
+		    <section class="section pillars" id="pillars">
+				<div class="container-fluid">
+					<div class=" col-xs-12 col-sm-6 col-md-4">
 						<ul class="list">
 							<li class="list__item list__item_right">
 								<p>Занимает не больше <br>1 м кв</p> 
@@ -99,7 +103,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-sm-4 col-sm-offset-4">
+					<div class=" col-xs-12 col-sm-6 col-md-4 col-md-offset-4 ">
 						<ul class="list">
 							<li class="list__item list__item_left">
 								<span class="list__icon"><i class="icon-4"></i></span>
@@ -122,7 +126,7 @@
 				</div>
 		    </section><!--pillars-->
 
-		    <section class="section conditions" id="">
+		    <section class="section conditions" id="conditions">
 		    	<div class="container">
 		    		<h2 class="h2">условия размещения</h2>
 		    		<h1 class="h1">пиларсы  класса люкс</h1>
@@ -174,15 +178,14 @@
 		    		</form>
 		    	</div>
 		    </section><!--conditions-->
-		    <section class="section places" id="">
+		    <section class="section places" id="places">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-xs-12 col-sm-6 places__map">
 							<div class="map">
-								
 							</div>
 						</div>
-						<div class="col-sm-6 places__info">
+						<div class="col-xs-12 col-sm-6 places__info">
 							<h2 class="h2">10 точек размещения</h2>
 							<h1 class="h1">вас обязательно увидят</h1>
 							<h3 class="h3">места с большим трафиком людей</h3>

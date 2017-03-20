@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
 
+    var windoWidth = window.innerWidth,
+        fixed = document.querySelector('.header');
 
 // aside menu
 
@@ -11,29 +13,72 @@ jQuery(document).ready(function () {
         'side': 'right'
     });
 
+    slideout.on('translate', function(translated) {
+      fixed.style.transform = 'translateX(' + translated + 'px)';
+    });
+
+    slideout.on('beforeopen', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(-256px)';
+    });
+
+    slideout.on('beforeclose', function () {
+      fixed.style.transition = 'transform 300ms ease';
+      fixed.style.transform = 'translateX(0px)';
+    });
+
+    slideout.on('open', function () {
+      fixed.style.transition = '';
+    });
+
+    slideout.on('close', function () {
+      fixed.style.transition = '';
+    });
+
+    $('.hamburger').on('click', function (e) {
+        $(this).toggleClass('hamburger_active');
+        slideout.toggle();
+    });
+
+// fullpage
     $('#fullpage').fullpage({
-        anchors:['index','service','pillars', 'conditions', 'contacts'],
+        anchors:['pindex','pservice','ppillars', 'pconditions', 'pcontacts'],
         navigation:true,
         menu:'#menu',
         onLeave: function(index, nextIndex, direction){
             
             var leavingSection = $(this),
-                bgVideo = $('.bg-video'); 
+                bgVideo = $('.bg-video');
+                
+            if (index == 2 && direction =='down'){
+                
+                if (windoWidth > 850) {
+                    bgVideo.css('left', '45%');               
+                } else {
+                    bgVideo.css('left', '41%');
+                }
 
-
-            if(index == 2 && direction =='down'){
-                bgVideo.css('left', '45%');               
             }
 
-            else if(index == 3 && direction == 'up'){
+            else if (index == 3 && direction == 'up'){
                 bgVideo.css('left', '60%'); 
             }
 
-            else if(index == 4 && direction == 'up'){
-                bgVideo.css('left', '45%'); 
+            else if (index == 4 && direction == 'up'){
+                
+                if (windoWidth > 850) {
+                    bgVideo.css('left', '45%');               
+                } else {
+                    bgVideo.css('left', '41%');
+                }
+
             }
         }
     });
+
+    if (windoWidth < 992) {
+        $.fn.fullpage.destroy();
+    }
 
     // map
     
@@ -113,7 +158,8 @@ jQuery(document).ready(function () {
                 title: element.title,
                 icon: element.icon,
             });
-        }); 
+        });
+
 });
 
 

@@ -1,20 +1,144 @@
+@media all and (max-width: 1800px) {
+	.social {
+		left: 10vw;
+	}
+}
+
 @media all and (max-width: 1200px) {
-	
+	.map {
+		height: 430px;
+		&:after {
+		}
+	}
 }
 
 
 @media all and (max-width: 992px) {
-	
+	.map {
+		height: 390px;
+	}
+
+	.list {
+		&__item {
+			&_right {
+				p {
+					margin-right: 20px;
+				}
+			}
+
+			&_left {
+				p {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	.section {
+		padding: 5vh 0;
+	}	
+
+	.index {
+		min-height: 100vh;
+	}
+
+	#fp-nav {
+		display: none;
+	}
 }
 
 @media all and (max-width: 769px) {
-	
+	.hamburger {
+		display: block;
+	}
+
+	.header {
+		&__nav {
+			display: none;
+		}
+	}
+
+	.form {
+		&__item {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+
+	.places {
+		&__map {
+			order: 1;
+			margin: 15px 0;
+		}
+		&__info {
+			order: 0;
+		}
+	}
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		&__item {
+			width: 50%;
+			flex-wrap: wrap;
+			justify-content: center;
+			p {
+				width: 100%;
+			}
+
+			&_right {
+				span {
+					order: 0;
+				}
+				p {
+					text-align: center;
+					order: 1;
+					margin: 10px 0;
+				}
+			}
+
+			&_left {
+				p {
+					text-align: center;
+					margin: 10px 0;
+				}
+			}
+		}
+	}
 }
 
 
-@media all and (max-width: 540px) {
-	
+@media all and (max-width: 600px) {
+	.variable__item {
+		width: 100%;
+		margin-top: 20px;
+		p {
+			margin: 0;
+		}
+	}
 }
 
 @media all and (max-width: 480px) {
+	.points {
+		justify-content: center;
+
+		&__list {
+			width: 100%;
+		}
+	}
+
+	.form {
+		width: 100%;
+	}
+
+	.map {
+		height: 340px;
+	}
+
+	.list__item {
+		width: 100%;
+	}
 }
