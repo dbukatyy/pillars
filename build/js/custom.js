@@ -78,6 +78,7 @@ jQuery(document).ready(function () {
 
     if (windoWidth < 992) {
         $.fn.fullpage.destroy();
+         $('.header').css('background', 'transparent');
     }
 
     // map
@@ -153,11 +154,80 @@ jQuery(document).ready(function () {
 
     locations.forEach( function( element ) {
         var marker = new google.maps.Marker({
-                position: element.position,
-                map: map,
-                title: element.title,
-                icon: element.icon,
-            });
+            position: element.position,
+            map: map,
+            title: element.title,
+            icon: element.icon,
         });
+    });
 
+
+    // validate form
+   $('.form__btn .btn').on('click', function (e) {
+        e.preventDefault();
+
+        var msg = $('.alert'),
+            // message = $('.form-alert .msg'),
+            form = $('.form'),
+            inputs =  $('.form__field'),
+            // errorMsg = form.find('.error'),
+            valid = validate();
+
+
+        function validate () {
+       
+            var valid = true;
+
+            // console.log(inputs );
+
+            inputs.each( function () {
+
+                if ( $(this).val() === '' ) {
+                     // console.log($(this).val());
+                    valid = false;
+                    return false;
+                } 
+            });
+               
+            return valid;
+        }
+
+        function showMessage(data) {
+            msg.html(data);
+            msg.css('display', 'flex');
+        }
+
+        if (valid) {
+
+             $.ajax({    
+                url: form.attr('action'),
+                data: form.serialize(),
+                type: 'POST',
+                success: function(data){
+                    showMessage(data);
+                    msg.css('color', 'rgba(39,179,101,.8)');
+                },
+                error: function(){
+                    showMessage('Ошибка отправки. Пожалуйста, повторите попытку.');
+                    msg.css('color', 'rgba(158,26,47,.8)');
+                },
+                complete: function(){
+                    setTimeout(function () {
+                        msg.css('display', 'none');
+                    }, 2000);
+                    form[0].reset();
+                }
+            });
+         } else {
+            showMessage('Пожалуйста, заполните все поля.')
+            msg.css('color', 'rgba(158,26,47,.8)');
+            setTimeout( function () {
+                msg.css('display', 'none');
+            }, 2000);
+         }
+    });
+
+   $(document).on('scroll', function (e) {
+        $(this).scrollTop() > 300 ? $('.header').css('background', '#fff') : $('.header').css('background', 'transparent');
+   });
 });
